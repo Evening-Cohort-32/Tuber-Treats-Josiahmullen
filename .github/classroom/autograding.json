@@ -1,0 +1,13 @@
+{
+  "tests": [
+    {
+      "name": "Autograding",
+      "run": "cd TuberTreats.Tests && HOME=/tmp dotnet test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}

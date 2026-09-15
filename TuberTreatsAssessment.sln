@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuberTreats", "TuberTreats\TuberTreats.csproj", "{02DF5FAA-A0F3-40FA-B581-EB3EED8B0822}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuberTreats.Tests", "TuberTreats.Tests\TuberTreats.Tests.csproj", "{326ECCC4-A383-4A48-B73C-83D607C1B3EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02DF5FAA-A0F3-40FA-B581-EB3EED8B0822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02DF5FAA-A0F3-40FA-B581-EB3EED8B0822}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02DF5FAA-A0F3-40FA-B581-EB3EED8B0822}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02DF5FAA-A0F3-40FA-B581-EB3EED8B0822}.Release|Any CPU.Build.0 = Release|Any CPU
+		{326ECCC4-A383-4A48-B73C-83D607C1B3EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{326ECCC4-A383-4A48-B73C-83D607C1B3EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{326ECCC4-A383-4A48-B73C-83D607C1B3EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{326ECCC4-A383-4A48-B73C-83D607C1B3EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
