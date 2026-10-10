@@ -1,9 +1,88 @@
+using TuberTreats.Models;
+
+//  "Database" (in-memory seed data)
+
+List<Customer> customers = new List<Customer>
+{
+    new Customer { Id = 1, Name = "Maggie Thompson", Address = "412 Elm Street" },
+    new Customer { Id = 2, Name = "Darius Webb", Address = "88 Broadway Avenue" },
+    new Customer { Id = 3, Name = "Priya Nair", Address = "1509 Charlotte Pike" },
+    new Customer { Id = 4, Name = "Leon Castillo", Address = "27 Music Row" },
+    new Customer { Id = 5, Name = "Hannah Osei", Address = "930 Gallatin Pike" }
+};
+
+List<TuberDriver> tuberDrivers = new List<TuberDriver>
+{
+    new TuberDriver { Id = 1, Name = "Carlos Mendez" },
+    new TuberDriver { Id = 2, Name = "Tasha Greene" },
+    new TuberDriver { Id = 3, Name = "Owen Fitzgerald" }
+};
+
+List<Topping> toppings = new List<Topping>
+{
+    new Topping { Id = 1, Name = "Butter" },
+    new Topping { Id = 2, Name = "Sour Cream" },
+    new Topping { Id = 3, Name = "Cheddar Cheese" },
+    new Topping { Id = 4, Name = "Bacon Bits" },
+    new Topping { Id = 5, Name = "Chives" }
+};
+
+List<TuberOrder> tuberOrders = new List<TuberOrder>
+{
+    // delivered order
+    new TuberOrder
+    {
+        Id = 1,
+        OrderPlacedOnDate = new DateTime(2026, 9, 20, 18, 15, 0),
+        CustomerId = 1,
+        TuberDriverId = 1,
+        DeliveredOnDate = new DateTime(2026, 9, 20, 18, 52, 0)
+    },
+    // driver assigned, not delivered yet
+    new TuberOrder
+    {
+        Id = 2,
+        OrderPlacedOnDate = new DateTime(2026, 9, 25, 12, 5, 0),
+        CustomerId = 2,
+        TuberDriverId = 2,
+        DeliveredOnDate = null
+    },
+    // no driver assigned yet
+    new TuberOrder
+    {
+        Id = 3,
+        OrderPlacedOnDate = new DateTime(2026, 9, 26, 19, 40, 0),
+        CustomerId = 3,
+        TuberDriverId = null,
+        DeliveredOnDate = null
+    },
+    // another delivered order for customer 1 and driver 1
+    new TuberOrder
+    {
+        Id = 4,
+        OrderPlacedOnDate = new DateTime(2026, 9, 26, 20, 10, 0),
+        CustomerId = 1,
+        TuberDriverId = 1,
+        DeliveredOnDate = new DateTime(2026, 9, 26, 20, 45, 0)
+    }
+};
+
+List<TuberTopping> tuberToppings = new List<TuberTopping>
+{
+    new TuberTopping { Id = 1, TuberOrderId = 1, ToppingId = 1 },
+    new TuberTopping { Id = 2, TuberOrderId = 1, ToppingId = 2 },
+    new TuberTopping { Id = 3, TuberOrderId = 1, ToppingId = 3 },
+    new TuberTopping { Id = 4, TuberOrderId = 2, ToppingId = 4 },
+    new TuberTopping { Id = 5, TuberOrderId = 2, ToppingId = 5 },
+    new TuberTopping { Id = 6, TuberOrderId = 4, ToppingId = 1 }
+    // order 3 is a plain potato, no toppings
+};
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
